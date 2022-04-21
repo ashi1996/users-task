@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
+*{box-sizing: border-box;}
+
+/* html, body { height: 100%; } */
+
+body { 
+  background: #f6f4f4;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header{
+  background: #212529;
+  min-height: 50px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+header .nav li{
+  padding: 0 8px;
+}
+
+.viewBox{
+  background-color: #fafafa;
+  border-radius: 7px;
+  min-height: 200px;
+}
+
+.like{
+  transition: 0.8s;
+}
+.like:hover{
+  transform: scale(1.5);
+}
+
+.favoriteItem{
+  transition: 0.8s;
+}
+
+.favoriteItem:hover{
+  cursor: pointer;
+  transform:scale(1.1);
+}
+
+.autoCompleteItem:hover{
+  background: rgb(243, 235, 225);
+}
+
+.shake {
+
+  animation: shakeCart .4s ease-in-out forwards;
+}
+
+@keyframes shakeCart {
+  25% {
+    transform:translateX(6px)
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  50% {
+    transform:translateX(-4px);
   }
-  to {
-    transform: rotate(360deg);
+  75% {
+    transform:translateX(2px);
+  }
+  100% {
+    transform:translateX(0);
   }
 }
