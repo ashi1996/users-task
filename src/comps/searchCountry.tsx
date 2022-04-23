@@ -34,7 +34,8 @@ function SearchCountry() {
   const onSubmitSearch = (placeName:string, UniqueId:string) => {
     getCurrentConditions(UniqueId);
     updateCurrentPlace(placeName, UniqueId);
-    setSearchText(placeName);
+    // setSearchText(placeName);
+    setSearchText('');
     resetAutocomplete();
   }
 
@@ -61,6 +62,9 @@ const checkIfInputInEnglish = (event:React.KeyboardEvent<HTMLInputElement>) => {
              <div key={item.Key} onClick={()=>onSubmitSearch(item?.LocalizedName, item.Key)}  style={{borderBottom:'1px solid black', cursor:'pointer'}} className='p-2 autoCompleteItem'>{item?.LocalizedName}</div>
            )
          })}
+         {searchText.length > 0 && searchComplete.length === 0 && 
+            <div  style={{borderBottom:'1px solid black', cursor:'pointer'}} className='p-2'>No results have been found.</div>
+          }
         </div>
       </div>
     </div>

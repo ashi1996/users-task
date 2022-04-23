@@ -1,4 +1,4 @@
-export const ACCUWEATHER_API_KEY = 'sHwTQ0IVdxkMVDfAbQXEnqEDFeQi6oXO';
+export const ACCUWEATHER_API_KEY = 'fAqebVmH2xdABat6sLyLFr0MoZuQwrTh';
 export const INIT_CITY_CODE = '215854';
 export const INIT_CITY_NAME = 'Tel Aviv';
 export const LOCAL_KEY = 'weather';
