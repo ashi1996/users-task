@@ -34,7 +34,6 @@ function SearchCountry() {
   const onSubmitSearch = (placeName:string, UniqueId:string) => {
     getCurrentConditions(UniqueId);
     updateCurrentPlace(placeName, UniqueId);
-    // setSearchText(placeName);
     setSearchText('');
     resetAutocomplete();
   }
