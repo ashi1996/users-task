@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import weatherReducer from "./weatherReducer"
+import usersReducer from "./usersReducer"
 
 const reducers = combineReducers({
-    weather:weatherReducer
+    users:usersReducer
 })
 
 export default reducers

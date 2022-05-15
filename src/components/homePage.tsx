@@ -1,14 +1,14 @@
 import React from 'react';
-import WeatherView from './weatherView';
-import SearchCountry from './searchCountry';
+import Modal from './Modal';
+import ViewUsers from './viewUsers';
 import '../App.css';
 
-
 function HomePage() {
+
   return (
     <div className="p-3">
-      <SearchCountry/>
-      <WeatherView/>
+      <ViewUsers/>
+      <Modal />
     </div>
   );
 }

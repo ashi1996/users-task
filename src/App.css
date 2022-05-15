@@ -20,48 +20,9 @@ header .nav li{
   padding: 0 8px;
 }
 
-.viewBox{
-  background-color: #fafafa;
-  border-radius: 7px;
-  min-height: 200px;
-}
-
-.like{
+.addUser{
   transition: 0.8s;
 }
-.like:hover{
+.addUser:hover{
   transform: scale(1.5);
-}
-
-.favoriteItem{
-  transition: 0.8s;
-}
-
-.favoriteItem:hover{
-  cursor: pointer;
-  transform:scale(1.1);
-}
-
-.autoCompleteItem:hover{
-  background: rgb(243, 235, 225);
-}
-
-.shake {
-
-  animation: shakeCart .4s ease-in-out forwards;
-}
-
-@keyframes shakeCart {
-  25% {
-    transform:translateX(6px)
-  }
-  50% {
-    transform:translateX(-4px);
-  }
-  75% {
-    transform:translateX(2px);
-  }
-  100% {
-    transform:translateX(0);
-  }
 }

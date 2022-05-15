@@ -3,17 +3,17 @@ import {BrowserRouter as Router} from 'react-router-dom'
 import { useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { actionCreators } from './state';
-import Header from './comps/header';
+import { NUMBER_USER_RESULTS } from './common/consts/strings';
 import AppRoutes from './appRotes';
-import { INIT_CITY_CODE } from './common/consts/strings';
+import Header from './components/header';
 import './App.css';
 
 function App() {
   const dispatch = useDispatch();
-  const { getCurrentConditions } = bindActionCreators(actionCreators, dispatch);
+  const { getAllUsers } = bindActionCreators(actionCreators, dispatch);
  
   useEffect(()=>{
-    getCurrentConditions(INIT_CITY_CODE);
+    getAllUsers(NUMBER_USER_RESULTS);
   },[])
 
   return (

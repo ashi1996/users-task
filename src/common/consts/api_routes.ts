@@ -1,13 +1,9 @@
-const base_url = 'http://dataservice.accuweather.com';
+const base_url = 'https://randomuser.me/api';
 
-const createUrl = (url: string): string => `${base_url}/${url}`;
+const createUrl = (url: string): string => `${base_url}${(url.charAt(0) === "?") ? '' : '/' }${url}`;
 
-const GET_AUTO_COMPLETE = createUrl('locations/v1/cities/autocomplete');
-const GET_CURRENT_CONDITIONS = createUrl('currentconditions/v1');
-const GET_NEXT_FIVE_DAYS = createUrl('forecasts/v1/daily/5day');
+const GET_All_USERS = createUrl(`?results=`);
 
 export {base_url, 
-        GET_AUTO_COMPLETE,
-        GET_CURRENT_CONDITIONS,
-        GET_NEXT_FIVE_DAYS 
+        GET_All_USERS
 };
